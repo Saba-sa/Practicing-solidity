@@ -8,12 +8,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "EthAmount",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
-				"name": "convertPrice",
+				"name": "addressToAmountFunded",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -32,26 +32,19 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getPrice",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getVersion",
+				"name": "funders",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -68,6 +61,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withgraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -107,11 +107,19 @@
 			]
 		},
 		"contract/Fundme.sol": {
-			"keccak256": "0x4de7f5d2e03cab9f9cae1c8d49f49cc105ddd4ba47ea1cfdd34b83a9c5629eb3",
+			"keccak256": "0x6ac9d6a0e928f18a1b148ec225f8ac4d3b59f9d5e093325d4e0bf6d41c3578b9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://de113143d01db72616f6748dbc0788d4989255d137a8d03e5103f0324052759c",
-				"dweb:/ipfs/QmWjsBL9G6EiA3HjzDc6aqD9J4a2P8XAafdW9FZybMxLvP"
+				"bzz-raw://0e585e292db4ae4b1672cae02097465ae33b40afd266adc7eeb78627b4e97f76",
+				"dweb:/ipfs/QmXPmKfg1tYobSitMfMC4NrT23n2vGX2zPLvBvDyqVWLg8"
+			]
+		},
+		"contract/Priceconverter.sol": {
+			"keccak256": "0x606c8f8397a9badaf4dcda01918a78ce341751d6342a0fb0944c2da1af4d6883",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://283007134bc173e3d48fadbaeb3d03ef030aa29be3764e8e14eb5a6f562a290d",
+				"dweb:/ipfs/QmVYsEitr29cEqyxrT8UET68E92vXMgSKitucRu1NNnXUV"
 			]
 		}
 	},
