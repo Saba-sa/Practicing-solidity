@@ -16,6 +16,10 @@
 				"type": "error"
 			},
 			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
 				"inputs": [],
 				"name": "MIN_USB",
 				"outputs": [
@@ -92,6 +96,10 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -130,11 +138,11 @@
 			]
 		},
 		"contract/Fundme.sol": {
-			"keccak256": "0xa536958c6efbaa3accfae1654ff04b755c83b95ff04e1c131afd57818ae8dd99",
+			"keccak256": "0x290be3cb85707f0b93b5205230ff9f8179bd40ca3eb5e8e467c7a3b27049ba9e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://789cb6fd87a1b7ec14b64e63380af88f75fe86244dd50a52faf4522ebe496c30",
-				"dweb:/ipfs/Qmf3zccChf5sBVnjNLfpRSHBKMGUZozhiRKZfM5FXcT1kz"
+				"bzz-raw://bd25639851cf906037aad1f3dadb9a571e14045e7053be6deb68ee441f46615f",
+				"dweb:/ipfs/QmUoQUN7m1253M44wkF4NMnTYcQUt43ghELJJBK5if4CTC"
 			]
 		},
 		"contract/Priceconverter.sol": {
