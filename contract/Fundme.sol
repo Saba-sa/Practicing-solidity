@@ -1,22 +1,25 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
 import "./Priceconverter.sol";
-
+ 
+ error notOwner();
 contract Fundme {
 using Priceconverter for uint256;
-    uint256 public minimumUSD=50*1e18;
+    uint256 public constant MIN_USB=50*1e18;
 address[] public funders;
 mapping (address=>uint256)public addressToAmountFunded;
-
+    address public immutable owner;
+constructor() {
+    owner=msg.sender;
+}
   
     function fund()public payable {
-require(msg.value.convertPrice()>= minimumUSD , "value must be atleast 1 eth");
+require(msg.value.convertPrice()>= MIN_USB , "value must be atleast 1 eth");
 funders.push(msg.sender);
     addressToAmountFunded[msg.sender]=msg.value;
     }
-function withgraw()public{
-    for (uint256 funderindex=0; funderindex<funders.length;funderindex++) 
-    {
+function withgraw()public onlyOwner{
+  for (uint256 funderindex = 0; funderindex < funders.length; funderindex++)   {
        address funder=funders[funderindex];
        addressToAmountFunded[funder]=0;
     }
@@ -32,5 +35,10 @@ function withgraw()public{
 
 }
 
-
+modifier onlyOwner{
+    if(msg.sender!=owner){
+revert notOwner();
+    }
+_;
+}
 }
