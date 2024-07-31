@@ -43,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/Stringcomparson.sol": "SimpleStorage"
+			"contract/Stringcomparson.sol": "Stringcomparson"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -58,11 +58,11 @@
 	},
 	"sources": {
 		"contract/Stringcomparson.sol": {
-			"keccak256": "0x48a68dabc4936f23d6b96f82fe931743ce56bca1c9c3e933ed840a8b2f812504",
+			"keccak256": "0x1bef23afa0ccc0dd988931cf060ed71e8faad8010e792ccb9c53ba14f0ab9847",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9a61f716196ae365cde4591fc7e0ec292da2f23798beded69fbeddfa7e1366d6",
-				"dweb:/ipfs/QmSaWYMzWXgk6ZVqaugonwiGLDoPUrAYRFPchqSMjo6caq"
+				"bzz-raw://c5e1ef2a7fd935583885008461b292db26cbdf39b71419164c658a04ae549066",
+				"dweb:/ipfs/QmY3qNyD1iBDuC8nakKiWDV7V8XxvFgbfa9xrG2VSwRNvr"
 			]
 		}
 	},

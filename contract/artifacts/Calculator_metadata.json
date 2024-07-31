@@ -1,0 +1,124 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "operation",
+						"type": "string"
+					}
+				],
+				"name": "calculate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ethValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gweiValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "usd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "weiValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/Calculator.sol": "Calculator"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/Calculator.sol": {
+			"keccak256": "0x2e4b60e4359ffff6bb63cbb63b20e7434e32550edf20a43dc713579a46cdce30",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://68d6a88bc0e817b80dbe72cac148305cf222c3174f678ebb694d21feb8068d86",
+				"dweb:/ipfs/Qmb2uGrAsRVrbN1VYRrNkz6Bpu8ZsmKmsyJKbWDbVcq4ha"
+			]
+		},
+		"contract/Stringcomparson.sol": {
+			"keccak256": "0x1bef23afa0ccc0dd988931cf060ed71e8faad8010e792ccb9c53ba14f0ab9847",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c5e1ef2a7fd935583885008461b292db26cbdf39b71419164c658a04ae549066",
+				"dweb:/ipfs/QmY3qNyD1iBDuC8nakKiWDV7V8XxvFgbfa9xrG2VSwRNvr"
+			]
+		}
+	},
+	"version": 1
+}

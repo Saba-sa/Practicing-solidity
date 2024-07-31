@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/Fundme.sol": "Name"
+			"contract/Safemathtester.sol": "Name"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/Fundme.sol": {
-			"keccak256": "0xd77f0078bf1a0cd92028fba58ddf2d36847664e2c77d69bb5d5caffcf030459b",
+		"contract/Safemathtester.sol": {
+			"keccak256": "0x3e8d74d9542dd5c4b10be893d27313c31a03bc3575f689c2746f0bb63c30404f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e89f7cc9b1f5953b8f0ad0fd6151f1dffef4dc25cdf5977931c42c5f20290dc0",
-				"dweb:/ipfs/QmQBmtoDFWZCNTVAMtxZX4ipJyL5P7biCNzNGnGSzYvu59"
+				"bzz-raw://8fe57c685aee8473f91d329ca3fde5c8ab901ab680242b3756c2097210a99947",
+				"dweb:/ipfs/QmQYWtk2iNoaXPq3yVTRobffZCmPjftjeA3YMZMxq4jnLD"
 			]
 		}
 	},
