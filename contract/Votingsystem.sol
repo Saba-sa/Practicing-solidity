@@ -1,58 +1,71 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.7;
+pragma solidity ^0.8.16;
 
-contract VotingSystem {
-    mapping(address => bool) internal alreadyVoted;
-    
-    struct Candidate {
+contract HandleVote {
+    struct CandidateDetail {
         string name;
-        uint voteCount;
+        uint votesCount;} 
+
+    struct VoteResult {
+        bytes32 serialNo; 
+        string candidateName; 
     }
 
-    modifier hasVoted() {
-        require(!alreadyVoted[msg.sender], "You have already voted.");
-        _;
+    mapping(uint256 => bool) private cnicVotes; 
+    mapping(uint => CandidateDetail) internal candidates;
+    mapping(bytes32 => bool) public votesCount; 
+    mapping(bytes32 => CandidateDetail) public voteRecords;
+
+    bytes32[] public serialNumbers; 
+    address owner;
+    uint public candidateCount; 
+
+    constructor() {
+        owner = msg.sender;
     }
 
     modifier onlyOwner() {
-        require(msg.sender == 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, "You have no authority");
+        require(msg.sender == owner, "You have no authority");
         _;
     }
 
-    mapping(uint => Candidate) internal candidates;
-    uint public candidatesCount;
-
-    function addCandidates(string memory _name) public onlyOwner {
-        candidatesCount++;
-        candidates[candidatesCount] = Candidate(_name, 0);
+    function addCandidate(string memory _name) public onlyOwner {
+        candidates[candidateCount] = CandidateDetail(_name, 0);
+        candidateCount++;
     }
 
-    function Seecandidatedetail(uint _id) public view returns (string memory name) {
-        Candidate memory candidate = candidates[_id];
-        return candidate.name;
+    function balletPaper(bytes32 _serialno, uint256 _cnic, uint _i) public {
+        require(!votesCount[_serialno], "Serial number already used"); 
+        require(bytes(candidates[_i].name).length > 0, "Invalid candidate index"); 
+        require(!cnicVotes[_cnic], "CNIC is already present, sorry."); 
+        
+        cnicVotes[_cnic] = true; 
+        votesCount[_serialno] = true; 
+        candidates[_i].votesCount++; 
+        voteRecords[_serialno] = candidates[_i]; 
+        serialNumbers.push(_serialno);
     }
 
-    function vote(uint _idofCandidate) public hasVoted { 
-        alreadyVoted[msg.sender] = true;
-        Candidate storage candidate = candidates[_idofCandidate];   
-        candidate.voteCount++;
+    function getCandidate(uint _index) public view returns (CandidateDetail memory) {
+        require(_index < candidateCount, "Candidate does not exist");
+        return candidates[_index];
     }
 
-    function seewhoWon() public view returns (string memory winnerName, uint winnerVoteCount) {
-        uint winningVoteCount = 0;
-        uint winningCandidateId = 0;
+    function getVoteRecord(bytes32 _serialno) public view returns (CandidateDetail memory) {
+        require(votesCount[_serialno], "Serial number has not voted"); 
+        return voteRecords[_serialno]; 
+    }
 
-        for (uint i = 1; i <= candidatesCount; i++) {
-            if (candidates[i].voteCount > winningVoteCount) {
-                winningVoteCount = candidates[i].voteCount;
-                winningCandidateId = i;
-            }
+    function getResult() public view returns (VoteResult[] memory) {
+        uint length = serialNumbers.length;
+        VoteResult[] memory results = new VoteResult[](length);
+
+        for (uint i = 0; i < length; i++) {
+            bytes32 serial = serialNumbers[i];
+            string memory candidateName = voteRecords[serial].name;
+            results[i] = VoteResult(serial, candidateName);
         }
 
-        if (winningCandidateId == 0) {
-            return ("No candidates", 0);
-        }
-
-        return (candidates[winningCandidateId].name, candidates[winningCandidateId].voteCount);
+        return results;
     }
 }

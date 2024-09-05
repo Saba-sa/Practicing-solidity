@@ -222,7 +222,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/Handlevoting.sol": "HandleVote"
+			"contract/Votingsystem.sol": "HandleVote"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -236,12 +236,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/Handlevoting.sol": {
-			"keccak256": "0xda9e357bc4384fed4d5e032ac649c1ff8b0a463e457e98f4b619cb5da40e9013",
+		"contract/Votingsystem.sol": {
+			"keccak256": "0x558915cc4c1b37b1212775feb5172930d081bf9e2a4d3792ff9b4433d76aafde",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6460c080dc1bf3ea3c0315ea22428481b2f4c93a720fa1d3b119699ee622c2c7",
-				"dweb:/ipfs/Qma9jH5n39E9a6jEcvgtnndRfCZUNpHV4PQp7H1fyBRgJi"
+				"bzz-raw://6561955175754411ed637f5701a61f300f9a9a4eacc044a1161ea644df38bf42",
+				"dweb:/ipfs/QmNWcNFa2oj5Suy4Q14yL2LcbEQ7EiYEfuJeSzYjbqBGP8"
 			]
 		}
 	},
