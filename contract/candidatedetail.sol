@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.9;
 
 contract CommitmentContract {
  
@@ -23,9 +23,9 @@ contract CommitmentContract {
         return string(buffer);
     }
 
-     function calculateHash(uint256 _cnic, string memory _randomNo) public pure returns (bytes32,uint256) {
+     function calculateHash(uint256 _cnic, string memory _randomNo) public pure returns (bytes32) {
         string memory cnicString = uintToString(_cnic);
         string memory concatenated = string(abi.encodePacked(cnicString, _randomNo));
-        return (keccak256(abi.encodePacked(concatenated)),_cnic);
+        return (keccak256(abi.encodePacked(concatenated)));
     }
 }

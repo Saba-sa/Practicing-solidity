@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -45,6 +50,19 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -95,7 +113,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/Votingsystem.sol": "VotingSystem"
+			"contract/Vt.sol": "VotingSystem"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -109,12 +127,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/Votingsystem.sol": {
-			"keccak256": "0xf29e9fe9695629d829cd5fe4ef56253f924f87f95cb489d7f4d007d7f838aaba",
+		"contract/Vt.sol": {
+			"keccak256": "0xa16f56b8879d71d6ed277c0c1e8048d07df7d3280ac60566c451f3a5797658d8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8619a362b1a962041e7420c84887ac9ff31d50431e9d055685b603ecb85e2ee2",
-				"dweb:/ipfs/QmZQtzysxmx1bQgjsCBx8zj83Qz9UU1z3tgG8tWUhsukXB"
+				"bzz-raw://28e996e7f8585de361ea3b68e4500c8048a765cd9792be53421ae4d391b56397",
+				"dweb:/ipfs/QmSz2PLWvKdpRxAkjPmm2C9qHus9Fh26N2oECMTbTCQNmL"
 			]
 		}
 	},
